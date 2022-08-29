@@ -2,16 +2,9 @@
 session_start(); 
 
 include "db_conn.php";
+include "helper.php";
 
 if (isset($_POST['uname']) && isset($_POST['password'])) {
-
-    function validate($data){
-
-       $data = htmlspecialchars(stripslashes(trim($data)));
-
-       return $data;
-
-    }
 
     $uname = validate($_POST['uname']);
 

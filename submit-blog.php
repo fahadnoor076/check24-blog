@@ -2,17 +2,10 @@
 session_start(); 
 
 include "db_conn.php";
+include "helper.php";
 
 if (isset($_POST['title']) && isset($_POST['link']) && isset($_POST['content'])) {
-
-    function validate($data){
-
-       $data = htmlspecialchars(stripslashes(trim($data)));
-
-       return $data;
-
-    }
-
+	
     $title = validate($_POST['title']);
 
     $link = validate($_POST['link']);
